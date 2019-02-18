@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+    <fieldset name="global" label="JGLOBAL_FIELDSET_OPTIONS">
+		<field 
+				name="password"
+				type="text"
+				label="COM_JLHOROSCOPE_PASS"
+				required="true"
+				default="sdfSDSdfsd"
+				size="10"
+				class=""
+				readonly="false"
+				disabled="false"
+				filter="">
+		</field>
+    </fieldset>
+    <fieldset
+            name="permissions"
+            label="JCONFIG_PERMISSIONS_LABEL"
+            description="JCONFIG_PERMISSIONS_DESC"
+            >
+        <field
+                name="rules"
+                type="rules"
+                label="JCONFIG_PERMISSIONS_LABEL"
+                class="inputbox"
+                validate="rules"
+                filter="rules"
+                component="com_jlhoroscope"
+                section="component"/>
+    </fieldset>
+</config>

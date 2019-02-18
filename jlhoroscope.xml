@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<extension type="component" version="3.5.0" method="upgrade">
+    <name>com_jlhoroscope</name>
+    <author>Joomline</author>
+    <authorEmail>sale@joomline.ru</authorEmail>
+    <authorUrl>http://joomline.ru</authorUrl>
+    <copyright>Joomline</copyright>
+    <license>GNU GPL v2 or later</license>
+    <version>1.0</version>
+    <description>COM_JLHOROSCOPE_DESC</description>
+    <creationDate>12 September 2016</creationDate>
+
+    <scriptfile>script.jlhoroscope.php</scriptfile>
+
+    <files folder="site">
+        <folder>assets</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+        <filename>controller.php</filename>
+        <filename>index.html</filename>
+        <filename>jlhoroscope.php</filename>
+        <filename>router.php</filename>
+    </files>
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <languages folder="site">
+        <language tag="en-GB">language/en-GB/en-GB.com_jlhoroscope.ini</language>
+        <language tag="ru-RU">language/ru-RU/ru-RU.com_jlhoroscope.ini</language>
+    </languages>
+    <administration>
+        <menu>COM_JLHOROSCOPE</menu>
+        <submenu>
+			<menu link="option=com_jlhoroscope&amp;view=horoscopes" view="horoscopes" img="class:horoscopes" alt="Jlhoroscope/Horoscope">HOROSCOPE_SUBMENU</menu>
+        </submenu>
+        <files folder="admin">
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>images</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>jlhoroscope.php</filename>
+        </files>
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB/en-GB.com_jlhoroscope.ini</language>
+            <language tag="ru-RU">language/ru-RU/ru-RU.com_jlhoroscope.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.com_jlhoroscope.sys.ini</language>
+            <language tag="ru-RU">language/ru-RU/ru-RU.com_jlhoroscope.sys.ini</language>
+        </languages>
+    </administration>
+</extension>
